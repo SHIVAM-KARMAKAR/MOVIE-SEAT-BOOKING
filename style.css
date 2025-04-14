@@ -5,7 +5,11 @@
 }
 
 body {
-    background-color: #242333;
+    margin:50px;
+    background-image : url(Bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -14,16 +18,22 @@ body {
     height: 100vh;
     font-family: 'Lato', sans-serif;
 }
-
+section{
+    border-radius: 20px;
+    background-size: cover;
+    background-color: rgb(0, 0, 0,0.5);
+}
 .movie-container {
-    margin: 20px 0;
+    margin: 30px;
+    font-size:30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .movie-container select {
     background-color: #fff;
     border: 0;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 30px;
     margin-left: 10px;
     padding: 5px 15px 5px 15px;
     -moz-appearance: none;
@@ -32,17 +42,26 @@ body {
 }
 
 .container {
+    margin: 20px;
     perspective: 1000px;
-    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
 }
 
 .seat {
     background-color: #444451;
-    height: 12px;
-    width: 15px;
-    margin: 3px;
+    height: 40px;
+    width: 35px;
+    /* margin: 10px; */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+.row .seat{
+    margin:15px;
+}
+.row .passage{
+    height:40px;
+    width:40px;
 }
 
 .seat.selected {
@@ -63,7 +82,7 @@ body {
 
 .seat:not(.occupied):hover {
     cursor: pointer;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .showcase .seat:not(.occupied):hover {
@@ -72,7 +91,7 @@ body {
 }
 
 .showcase {
-    background: rgba(0, 0, 0, 0.1);
+    margin:20px;
     padding: 5px 10px;
     border-radius: 5px;
     color: #777;
@@ -82,6 +101,7 @@ body {
 }
 
 .showcase li {
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,8 +125,12 @@ body {
     box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
 }
 
+p{
+    text-align: center;
+}
 p.text {
-    margin: 5px 0;
+    margin: 10px 0;
+    font-size: 30px;
 }
 
 p.text span {
@@ -114,6 +138,7 @@ p.text span {
 }
 
 button{
+    text-align: center;
     text-decoration: none;
     color:white;
     background-color: #242333;
